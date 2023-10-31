@@ -180,28 +180,28 @@ function fetchWeather(name) {
     })
 }
 
-// locationName.addEventListener("keyup", e => e.key === "Enter" && fetchWeather(cityName));
-function onWindowLoad() {
-  // Check if the input field is empty
-  if (cityName === '') {
-    // Call the function with the first parameter
-    navigator.geolocation.getCurrentPosition(
-          position => {
-            const { latitude, longitude } = position.coords; // Get coordinates of user location
-            fetchWeather(`${latitude},${longitude}`);
-  })
-}
-}
-// Function to be called when the enter key is pressed
-function onEnterKeyPress(event) {
-  // Check if the enter key is pressed
-  if (event.key === "Enter") {
-    // Call the function with the second parameter
-    fetchWeather(cityName)
-  }
-}
+locationName.addEventListener("keyup", e => e.key === "Enter" && fetchWeather(cityName));
+// function onWindowLoad() {
+//   // Check if the input field is empty
+//   if (cityName === '') {
+//     // Call the function with the first parameter
+//     navigator.geolocation.getCurrentPosition(
+//           position => {
+//             const { latitude, longitude } = position.coords; // Get coordinates of user location
+//             fetchWeather(`${latitude},${longitude}`);
+//   })
+// }
+// }
+// // Function to be called when the enter key is pressed
+// function onEnterKeyPress(event) {
+//   // Check if the enter key is pressed
+//   if (event.key === "Enter") {
+//     // Call the function with the second parameter
+//     fetchWeather(cityName)
+//   }
+// }
 
 
-// Add event listeners
-window.addEventListener('load', onWindowLoad);
-locationName.addEventListener('keypress', onEnterKeyPress);
+// // Add event listeners
+// window.addEventListener('load', onWindowLoad);
+// locationName.addEventListener('keypress', onEnterKeyPress);
