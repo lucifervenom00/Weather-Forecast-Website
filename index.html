@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-items">
+            <div class="today" id="today">
+                <span id="current-day">-</span>
+                <span id="current-month">-</span>
+                <span id="current-date">-,</span>
+                <span id="current-year">-</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="location-name" placeholder="Search for Place..">
+                <i class='bx bx-search'></i>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="left-hero-section">
+            <div class="hourly-forecast">
+
+                <div class="current">
+                    <span class="current-temp" id="current-temp">-</span>
+
+                </div>
+                <div class="after-1 time-forecast-cards">
+                    <span class="time-title">-</span>
+                    <span class="hourly-temp" id="a1temp"></span>
+                    <div class="hourly-humidity">
+                        <i class='bx bx-droplet'></i>
+                        <span class="after-1-humid" id="a1h"></span>
+                    </div>
+                </div>
+                <div class="after-2 time-forecast-cards">
+                    <span class="time-title">-</span>
+                    <span class="hourly-temp" id="a2temp"></span>
+                    <div class="hourly-humidity">
+                        <i class='bx bx-droplet'></i>
+                        <span class="after-2-humid" id="a2h"></span>
+                    </div>
+                </div>
+                <div class="after-3 time-forecast-cards">
+                    <span class="time-title" id="a3t">-</span>
+                    <span class="hourly-temp" id="a3temp"></span>
+                    <div class="hourly-humidity">
+                        <i class='bx bx-droplet'></i>
+                        <span class="after-3-humid" id="a3h"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-conditions-icons">
+                <img src="" id="toggleIcons" alt="">
+            </div>
+            <div class="suggestions">
+                <div class="current-temp-desc"><span id="current-temp-desc">Clear</span></div>
+            </div>
+            <div class="daily-forecast">
+                <div class="today-forecast daily-forecast-cards">
+                    <span id="today's-title" class="active-day daily-forecast-days">Today</span>
+                    <img src="" class="forecast_desc_icons" alt="">
+                    <div class="max-min"><span id="today-max">-</span><span id="today-min">-</span></div>
+                </div>
+                <div class="tomorrow-forecast daily-forecast-cards">
+                    <span id="tomorrow's-title" class="daily-forecast-days"></span>
+                    <img src="" class="forecast_desc_icons" alt="">
+                    <div class="max-min"><span id="tomo-max">-</span><span id="tomo-min">-</span></div>
+                </div>
+                <div class="3rd-day-forecast daily-forecast-cards">
+                    <span id="3rd-day's-title" class="daily-forecast-days"></span>
+                    <img src="" class="forecast_desc_icons" alt="">
+                    <div class="max-min"><span id="3rdday-max">-</span><span id="3rdday-min">-</span></div>
+                </div>
+                <div class="4th-day-forecast daily-forecast-cards">
+                    <span id="4th-day's-title" class="daily-forecast-days"></span>
+                    <img src="" class="forecast_desc_icons" alt="">
+                    <div class="max-min"><span id="4thday-max">-</span><span id="4thday-min">-</span></div>
+                </div>
+                <div class="5th-day-forecast daily-forecast-cards">
+                    <span id="5th-day's-title" class="daily-forecast-days"></span>
+                    <img src="" class="forecast_desc_icons" alt="">
+                    <div class="max-min"><span id="5thday-max">-</span><span id="5thday-min">-</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="right-hero-section">
+            <div class="world-time">
+                <span id="current-time">-</span>
+            </div>
+            <div class="seperator"></div>
+            <div class="first-row">
+                <div class="items">
+                    <span class="left-col-title">Min./Max.</span>
+                    <div class="temp-data">
+                        <span id="max-temp">-</span>
+                        <span id="min-temp">-</span>
+                    </div>
+                </div>
+                <div class="items">
+                    <span class="left-col-title">Feels Like</span>
+                    <div class="temp-data"><span id="feels-like">-</span></div>
+                </div>
+            </div>
+            <div class="seperator"></div>
+            <div class="second-row">
+                <div class="items">
+                    <span class="left-col-title">UV Index</span>
+                    <div class="temp-data"> <span id="uv-level">-</span></div>
+                </div>
+                <div class="items">
+                    <span class="left-col-title">Humidity</span>
+                    <div class="temp-data"><span id="humidity-scale">-</span></div>
+                </div>
+            </div>
+            <div class="seperator"></div>
+            <div class="third-row">
+                <div class="items">
+                    <span class="left-col-title">Wind Status</span>
+                    <div class="temp-data"><span id="wind-speed">-</span></div>
+                </div>
+                <div class="items">
+                    <span class="left-col-title">Air Pressure</span>
+                    <div class="temp-data"><span id="air-pressure-scale">-</span></div>
+                </div>
+            </div>
+            <div class="seperator"></div>
+            <div class="location">
+                <span id="location-details">-,-,-</span>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
