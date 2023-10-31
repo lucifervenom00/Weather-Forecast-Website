@@ -1,10 +1,10 @@
 import weaCode from './weather_desc.json' assert {type: 'json'};
 import weacodeicons from './Weather_Code_Icons/weather_desc_img.json' assert {type: 'json'};
-const locationName = document.querySelector(".search-bar #location-name"),
-  cityName = document.querySelector(".search-bar #location-name").value;
-function fetchWeather(name) {
+const locationName = document.querySelector(".search-bar #location-name");
+function fetchWeather() {
   const todayDate = document.querySelector('#today'),
-
+  
+  cityName = document.querySelector(".search-bar #location-name").value,
     current_temp = document.querySelector('.current #current-temp'),
     weatherDesc = document.querySelector('.suggestions #current-temp-desc'),
     weeklyMax_Min = document.querySelectorAll(".max-min span"),
@@ -40,7 +40,7 @@ function fetchWeather(name) {
     }
   }
 
-  fetch(`https://api.tomorrow.io/v4/weather/forecast?location=${name}&apikey=0k0k4QBmHVzTLvtU4XqlO0UsQLPHzmPk`)
+  fetch(`https://api.tomorrow.io/v4/weather/forecast?location=${cityName}&apikey=0k0k4QBmHVzTLvtU4XqlO0UsQLPHzmPk`)
     .then(response => response.json())
     .then(data => {
       //today's date
@@ -180,7 +180,7 @@ function fetchWeather(name) {
     })
 }
 
-locationName.addEventListener("keyup", e => e.key === "Enter" && fetchWeather(cityName));
+locationName.addEventListener("keyup", e => e.key === "Enter" && fetchWeather());
 // function onWindowLoad() {
 //   // Check if the input field is empty
 //   if (cityName === '') {
