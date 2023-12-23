@@ -1,4 +1,4 @@
-import weaCode from './weather_desc.json' assert {type: 'json'};
+import weaCode from 'weather_desc.json' assert {type: 'json'};
 import weacodeicons from 'Weather_Code_Icons/weather_desc_img.json' assert {type: 'json'};
 const locationName = document.querySelector(".search-bar #location-name");
 function fetchWeather() {
